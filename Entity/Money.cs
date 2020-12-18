@@ -8,6 +8,7 @@ namespace Bridge.Entity
             ,EUR
             ,USD
             ,GRN
+            ,BYN
         }
         public double Value { get; set; }
         public CurrencyType Currency{ get; set; }

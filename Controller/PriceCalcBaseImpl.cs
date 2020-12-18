@@ -10,15 +10,12 @@ namespace Bridge.Controller
         {
             return new Money() {
                 Value = ProductRepository.products[itemId].Price.Value,
-                Currency = Money.CurrencyType.RUB
+                Currency = ProductRepository.products[itemId].Price.Currency
             };
         }
         public virtual Money GetShippingPrice(IEnumerator cart, Entity.Address shippingTo)
         {
-            return new Money() {
-                Value = 20,
-                Currency = Money.CurrencyType.RUB
-            };
+            return shippingTo.Price;
         }
     }
 }

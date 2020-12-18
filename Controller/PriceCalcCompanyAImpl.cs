@@ -9,15 +9,12 @@ namespace Bridge.Controller
         public override Money GetShippingPrice(IEnumerator cart, Entity.Address shippingTo)
         {
             //TODO
-            return new Money() {
-                Value = 30,
-                Currency = Money.CurrencyType.RUB
-            };
+            return shippingTo.Price;
         }
 
-        /*public virtual void SetDeliveryCompany(DeliveryCompany company)
-        {
-            this._impl = PriceCalcImplFabric.GetPriceCalcImpl(company);
-        }*/
+        //public virtual void SetDeliveryCompany(DeliveryCompany company)
+        //{
+        //    this._impl = PriceCalcImplFabric.GetPriceCalcImpl(company);
+        //}
     }
 }

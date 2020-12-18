@@ -22,8 +22,10 @@ namespace Bridge.Entity
               Price=new Money(){Currency=Money.CurrencyType.GRN, Value=5000}
               }
           };
+
         public static Dictionary<uint, Product> products =
           new Dictionary<uint, Product>();
+
         static ProductRepository(){
           foreach (Product p in productList)
           {
